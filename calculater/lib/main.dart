@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:untitled/function.dart';
 
@@ -75,8 +73,6 @@ class _HomeState extends State<Home> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
                     children: row.map((value) {
-                      final myfun = Myfunction();
-
                       return calcButtons("${value}",butoperators.contains(value) ?  Colors.orangeAccent : simp.contains(value) ? Colors.white :Colors.black26, Colors.black, value != "0" ?90:180 ,30,()
                       {
                         var result =  Myfunction.appendInput(value,setState);
@@ -86,12 +82,9 @@ class _HomeState extends State<Home> {
 
                       }
                       );}).toList(),
-                  ),
-              ],
+                  ),],
             ),
       )
       )
     );
-
-  }
-}
+  }}
